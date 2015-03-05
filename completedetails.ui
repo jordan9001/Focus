@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CompleteDetails</class>
+ <widget class="QWidget" name="CompleteDetails">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>419</width>
+    <height>68</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(110, 110, 110, 255), stop:0.101942 rgba(91, 91, 91, 255), stop:0.820388 rgba(60, 60, 60, 255), stop:0.990291 rgba(37, 37, 37, 255));
+	color: rgb(225, 225, 225);
+}
+QTextBrowser, QLineEdit {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(37, 37, 37, 147), stop:0.0873786 rgba(60, 60, 60, 150), stop:0.932039 rgba(91, 91, 91, 148), stop:1 rgba(110, 110, 110, 148));
+	border: 1px  solid rgb(147, 45, 203);
+	border-radius: 3px;
+}
+
+QLCDNumber, QSpinBox, QDateTimeEdit {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(37, 37, 37, 147), stop:0.0873786 rgba(60, 60, 60, 150), stop:0.932039 rgba(91, 91, 91, 148), stop:1 rgba(110, 110, 110, 148));
+	border: 1px  solid rgb(44, 44, 44);
+	border-radius: 3px;
+}
+
+QLabel {
+	background-color:rgba(255, 255, 255, 0);
+}
+
+QPushButton {
+	background-color:rgba(255, 255, 255, 0);
+}
+
+QProgressBar {
+	background-color: rgb(44, 44, 44);
+	border: 1px  solid rgb(44, 44, 44);
+	margin: 8px, 8px;
+	color:rgba(255, 255, 255, 0);
+}
+QProgressBar::chunk {
+	background-color: rgb(147, 45, 203);
+}</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>10</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLCDNumber" name="MinCount">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>10</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="segmentStyle">
+    <enum>QLCDNumber::Flat</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>15</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>You Spent</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>20</y>
+     <width>59</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>15</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Min on:</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="Tags">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>10</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
