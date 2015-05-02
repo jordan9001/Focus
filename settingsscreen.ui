@@ -12,7 +12,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>319</width>
+    <width>419</width>
     <height>68</height>
    </size>
   </property>
@@ -24,6 +24,9 @@
   </property>
   <property name="windowTitle">
    <string/>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
   </property>
   <property name="styleSheet">
    <string notr="true">QWidget {

@@ -9,6 +9,8 @@ SettingsScreen::SettingsScreen(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    this->setParent(0);
+    this->showFullScreen();
     connect(ui->DoneSet,SIGNAL(clicked()),this,SLOT(submit()));
     connect(ui->TagsSet,SIGNAL(editingFinished()),this,SLOT(textclean()));
     connect(ui->MinSet,SIGNAL(valueChanged(int)),this,SLOT(changetime(int)));
@@ -54,7 +56,9 @@ void SettingsScreen::submit(){
     }
     savefile.close();
 
-    this->hide();
+    this->setParent(0);
+    this->showNormal();
+
     emit submitted(tags,timestart,timeend);
     return;
 }

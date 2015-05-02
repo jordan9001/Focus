@@ -73,7 +73,7 @@ void Widget::updateprog()
         }
     }
 
-
+    emit hidesettings();
     return;
 }
 

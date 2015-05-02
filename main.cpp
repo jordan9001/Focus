@@ -10,7 +10,9 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     SettingsScreen w;
+    //w.setWindowState(Qt::WindowFullScreen);
     w.show();
+
     Widget q;
     q.hide();
     CompleteDetails d;
@@ -19,10 +21,11 @@ int main(int argc, char *argv[])
     b.hide();
 
     QObject::connect(&w,SIGNAL(submitted(QStringList,QDateTime,QDateTime)),&q,SLOT(startcount(QStringList,QDateTime,QDateTime)));
+    QObject::connect(&q,SIGNAL(hidesettings()),&w,SLOT(hide()));
     QObject::connect(&q,SIGNAL(complete(QDateTime,QDateTime,QStringList)),&d,SLOT(report(QDateTime,QDateTime,QStringList)));
     QObject::connect(&q,SIGNAL(breaksignal(QTimer*,QDateTime)),&b,SLOT(startbreak(QTimer*,QDateTime)));
     QObject::connect(&b,SIGNAL(breakover(double)),&q,SLOT(processbreak(double)));
-    QObject::connect(&d,SIGNAL(reset()),&w,SLOT(show()));
+    QObject::connect(&d,SIGNAL(reset()),&w,SLOT(showFullScreen()));
 
     return a.exec();
 }

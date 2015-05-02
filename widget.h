@@ -40,6 +40,7 @@ private slots:
 signals:
     void complete(QDateTime, QDateTime, QStringList);
     void breaksignal(QTimer*, QDateTime);
+    void hidesettings();
 };
 
 #endif // WIDGET_H
